@@ -1,5 +1,6 @@
 architect:
-  - matthiastran
+  - msuret
+  - ochedru
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
@@ -8,7 +9,8 @@ docker:
   image: "teamed/docker-java-8"
 release:
   commanders:
-    - matthiastran
+    - msuret
+    - ochedru
   script: |
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
